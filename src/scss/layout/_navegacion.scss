@@ -1,0 +1,41 @@
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem; /** alto del banner principal  **/
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.navegacion {
+    
+    @include tablet{
+        display: flex;
+        align-items: center; /** Alinea el logo con la barra de navegacion **/
+    }
+    a {
+        color:$blanco;
+        text-decoration: none;
+        font-size: 2.2rem;
+        display: block;
+        text-align: center;
+        @include tablet {
+            margin-right: 2rem;
+            font-size: 1.8rem; /** Tamaño de la letra de la barra de navegacion **/
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+/**menu 3lineas.MENU DE AMBURGUESA--NO SE ESTA USANDO ESTE CODIGO **/ 
+.mobile-menu {
+    @include tablet {
+        display: none;
+    }
+    img {
+        width: 5rem;
+    }
+    
+}
